@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-
-
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
+  --animate-marquee: marquee 20s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,16 +32,37 @@ body {
 
 @variant dark (&:where(.dark, .dark *));
 
-html, body {
+html,
+body {
   @apply transition-colors duration-700 ease-in-out;
 }
 
-
-.text-primary{
-  @apply bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent
+.text-primary {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent;
 }
 
-.bg-primary{
-  @apply bg-gradient-to-r from-purple-500 to-pink-500
+.bg-primary {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500;
 }
 
+
+@keyframes bounce-strong {
+  0%,
+  100% {
+    transform: translateY(-100%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(120%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-strong {
+  animation: bounce-strong 1.4s infinite;
+}
+
+ @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }

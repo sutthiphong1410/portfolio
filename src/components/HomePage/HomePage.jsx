@@ -13,7 +13,7 @@ const HomePage = () => {
             <div>
                 <Navbar />
                 
-                <div className="text-black dark:text-white py-60  relative">
+                <div id="home" className="text-black dark:text-white py-60  relative">
                     <div className="flex flex-col items-center justify-center">
                         <div className="max-w-xl text-center space-y-6 px-4">
                             <div className="relative inline-block">
@@ -49,7 +49,7 @@ const HomePage = () => {
                             <div className="flex flex-col items-center gap-y-3">
                                 <p className="uppercase text-xs text-gray-500 tracking-wider">Scroll down</p>
                                 <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex items-start justify-center p-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce"></div>
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce-strong " ></div>
                                 </div>
                             </div>
                         </div>
