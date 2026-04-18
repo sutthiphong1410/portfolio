@@ -47,7 +47,6 @@ const MyProject = () => {
       image: "https://picsum.photos/seed/picsum/536/354",
       type: "Full Stack",
       techStack: [iconJs, iconReact, iconNode, iconMongo],
-
     },
     {
       title: "Frontend Project",
@@ -102,32 +101,40 @@ const MyProject = () => {
         </div>
         <div className="flex gap-1 mt-5 text-sm">
           <button
-            className={`border border-gray-500 px-4 py-0.5 rounded-full hover:bg-gray-500 hover:text-white duration-300 active:scale-95 cursor-pointer ${
-              activeFilter === "All" ? "bg-gray-400 text-white" : ""
+            className={`text-black dark:text-white border border-gray-500 px-4 py-0.5 rounded-full hover:bg-black dark:hover:bg-gray-400 hover:text-white duration-300 active:scale-95 cursor-pointer ${
+              activeFilter === "All"
+                ? "bg-black dark:bg-gray-400 text-white"
+                : ""
             }`}
             onClick={() => setActiveFilter("All")}
           >
             All
           </button>
           <button
-            className={`border border-gray-500 px-4 py-0.5 rounded-full hover:bg-gray-500 hover:text-white duration-300 active:scale-95 cursor-pointer ${
-              activeFilter === "Full Stack" ? "bg-gray-400 text-white" : ""
+            className={`text-black dark:text-white border border-gray-500 px-4 py-0.5 rounded-full  hover:bg-black dark:hover:bg-gray-400 hover:text-white duration-300 active:scale-95 cursor-pointer ${
+              activeFilter === "Full Stack"
+                ? "bg-black dark:bg-gray-400 text-white"
+                : ""
             }`}
             onClick={() => setActiveFilter("Full Stack")}
           >
             Full Stack
           </button>
           <button
-            className={`border border-gray-500 px-4 py-0.5 rounded-full hover:bg-gray-500 hover:text-white duration-300 active:scale-95 cursor-pointer ${
-              activeFilter === "Frontend" ? "bg-gray-400 text-white" : ""
+            className={`text-black dark:text-white border border-gray-500 px-4 py-0.5 rounded-full hover:bg-black dark:hover:bg-gray-400 hover:text-white duration-300 active:scale-95 cursor-pointer ${
+              activeFilter === "Frontend"
+                ? "bg-black dark:bg-gray-400 text-white"
+                : ""
             }`}
             onClick={() => setActiveFilter("Frontend")}
           >
             Frontend
           </button>
           <button
-            className={`border border-gray-500 px-4 py-0.5 rounded-full hover:bg-gray-500 hover:text-white duration-300 active:scale-95 cursor-pointer ${
-              activeFilter === "Backend" ? "bg-gray-400 text-white" : ""
+            className={`text-black dark:text-white border border-gray-500 px-4 py-0.5 rounded-full hover:bg-black dark:hover:bg-gray-400 hover:text-white duration-300 active:scale-95 cursor-pointer ${
+              activeFilter === "Backend"
+                ? "bg-black dark:bg-gray-400 text-white"
+                : ""
             }`}
             onClick={() => setActiveFilter("Backend")}
           >
@@ -138,7 +145,7 @@ const MyProject = () => {
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl p-6 hover:scale-105 duration-300 hover:bg-neutral-800"
+              className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-lg dark:hover:bg-neutral-800"
             >
               <div className="overflow-hidden rounded-lg">
                 <img
@@ -148,9 +155,11 @@ const MyProject = () => {
                 />
               </div>
               <div className="flex justify-between items-center my-4">
-                <h4 className="text-sm font-semibold">{project.title}</h4>
+                <h4 className="text-sm font-medium text-black dark:text-gray-300">
+                  {project.title}
+                </h4>
                 <div className="flex gap-2 items-center">
-                  <button className="text-[15px] border border-gray-200 hover:bg-gray-200 hover:text-black px-2 py-0.5 rounded-xl text-sm cursor-pointer duration-300 active:scale-95">
+                  <button className="text-[15px] text-black dark:text-white border border-black dark:border-gray-200 hover:bg-gray-200 dark:hover:text-black px-2 py-0.5 rounded-xl text-sm cursor-pointer duration-300 active:scale-95">
                     Live Demo
                   </button>
                   <div className="text-xl cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white duration-300 active:scale-95">
@@ -158,7 +167,7 @@ const MyProject = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600  text-sm">
+              <p className="text-gray-600 text-[16px] font-light">
                 {project.description}
               </p>
 
@@ -171,7 +180,6 @@ const MyProject = () => {
                     className="w-4 h-4 object-contain"
                   />
                 ))}
-
               </div>
             </div>
           ))}
@@ -187,6 +195,20 @@ const MyProject = () => {
             </button>
           </div>
         ) : null}
+      </div>
+
+      <div className="flex items-center gap-3 mt-7">
+        <div className="w-full flex items-center justify-around ">
+          <div className=" w-1/3 h-[1px] bg-gradient-to-r from-transparent to-gray-400"></div>
+
+          <div className="flex items-center gap-1 z-10">
+            <div className=" w-1 h-1 bg-gray-300 rounded-full animate-bounce duration-300"></div>
+            <div className=" w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce duration-300"></div>
+            <div className=" w-1 h-1 bg-gray-300 rounded-full animate-bounce duration-300"></div>
+          </div>
+
+          <div className=" w-1/3 h-[1px] bg-gradient-to-l from-transparent to-gray-400"></div>
+        </div>
       </div>
     </>
   );

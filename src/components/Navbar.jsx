@@ -54,6 +54,13 @@ const Navbar = () => {
                 Project
               </Link>
 
+              <Link
+                href="#contact"
+                className="hover:border-b hover:border-purple-400"
+              >
+                Contact
+              </Link>
+
               <div
                 className="border border-dashed border-gray-500 p-2 rounded-full  text-gray-300 cursor-pointer
                                                     transition-all duration-300 ease-in-out 
@@ -77,8 +84,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-     
     </>
   );
 };
