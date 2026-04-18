@@ -22,36 +22,44 @@ const Contact = () => {
         <div className="flex gap-8">
           <div className="w-2/5 p-6 bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl  duration-300 hover:shadow-lg">
             <div className="flex flex-col gap-7">
-              <h3 className="text-lg font-bold">Contact Information</h3>
+              <h3 className="text-lg font-semibold text-gray-600 dark:text-white">
+                Contact Information
+              </h3>
 
               <div className="flex gap-2">
-                <CiMail className="text-xl" />
+                <CiMail className="text-xl text-gray-600 dark:text-white" />
                 <div className="flex flex-col">
-                  <div className="font-semibold text-sm">Email</div>
-                  <div className="text-gray-400">your.email@example.com</div>
+                  <div className=" font-semibold text-sm text-gray-600 dark:text-white">
+                    Email
+                  </div>
+                  <div className="text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    your.email@example.com
+                  </div>
                 </div>
               </div>
 
               <div className="flex gap-2">
-                <BsChat className="text-xl" />
+                <BsChat className="text-xl text-gray-600 dark:text-white" />
                 <div className="flex flex-col">
-                  <div className="font-semibold text-sm">Social Media</div>
+                  <div className=" font-semibold text-sm text-gray-600 dark:text-white">
+                    Social Media
+                  </div>
 
-                  <div className="flex gap-2 items-center text-gray-400 ">
+                  <div className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                     <h3>Github </h3>
                     <span>
                       <IoMdArrowForward />
                     </span>
                   </div>
 
-                  <div className="flex gap-2 items-center text-gray-400">
+                  <div className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                     <h3>LinkedIn</h3>
                     <span>
                       <IoMdArrowForward />
                     </span>
                   </div>
 
-                  <div className="flex gap-2 items-center text-gray-400">
+                  <div className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                     <h3>X(Twitter)</h3>
                     <span>
                       <IoMdArrowForward />
@@ -71,8 +79,8 @@ const Contact = () => {
             <form action="">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex gap-2 items-center mb-2">
-                    <GoPerson className="text-xl" />
+                  <div className="flex gap-2 items-center mb-2 text-black dark:text-white">
+                    <GoPerson className="text-xl " />
                     <label htmlFor="name">Your Name</label>
                   </div>
                   <input
@@ -80,27 +88,27 @@ const Contact = () => {
                     id="name"
                     name="name"
                     placeholder="John Doe"
-                    className="w-full p-2 border border-neutral-700 bg-neutral-800 rounded-md"
+                    className="form-control"
                   />
                 </div>
 
                 <div>
-                  <div className="flex gap-2 items-center mb-2">
-                    <CiMail className="text-xl" />
+                  <div className="flex gap-2 items-center mb-2 text-black dark:text-white">
+                    <CiMail className="text-xl " />
                     <label htmlFor="name">Your Email</label>
                   </div>
                   <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     placeholder="john@example.com"
-                    className="w-full p-2 border border-neutral-700 bg-neutral-800 rounded-md"
+                    className="form-control"
                   />
                 </div>
 
                 <div>
-                  <div className="flex gap-2 items-center mb-2">
-                    <BsChat className="text-xl" />
+                  <div className="flex gap-2 items-center mb-2 text-black dark:text-white">
+                    <BsChat className="text-xl " />
                     <label htmlFor="message">Your Message</label>
                   </div>
                   <textarea
@@ -108,14 +116,14 @@ const Contact = () => {
                     id="message"
                     name="message"
                     placeholder="Tell me about your project or inquiry..."
-                    className="w-full p-2 border border-neutral-700 bg-neutral-800 rounded-md"
+                    className="form-control"
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors duration-300"
+                className="mt-4 px-3 py-2 bg-primary text-white rounded-xl cursor-pointer hover:bg-primary-dark hover:-translate-y-1  transition-transform duration-300 "
               >
                 Send Message <IoIosSend className="inline-block " />
               </button>
@@ -123,8 +131,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-   
     </>
   );
 };

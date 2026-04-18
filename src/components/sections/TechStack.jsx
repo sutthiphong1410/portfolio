@@ -184,7 +184,7 @@ const TechStack = () => (
         {groups.map((g) => (
           <div
             key={g.label}
-            className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl px-6 py-5"
+            className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 shadow-md rounded-2xl px-6 py-5"
           >
             <p className="text-[11px] font-medium tracking-widest text-black dark:text-gray-400 uppercase mb-4">
               {g.label}

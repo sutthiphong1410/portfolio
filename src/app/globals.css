@@ -45,6 +45,11 @@ body {
   @apply bg-gradient-to-r from-purple-500 to-pink-500;
 }
 
+.form-control {
+  @apply w-full text-sm p-2 border border-gray-300 dark:border-neutral-700 bg-gray-200 dark:bg-neutral-800 rounded-md 
+             focus:outline-none focus:border-neutral-400
+             transition-colors duration-300 text-black dark:text-white placeholder:text-neutral-500;
+}
 
 @keyframes bounce-strong {
   0%,
@@ -62,7 +67,11 @@ body {
   animation: bounce-strong 1.4s infinite;
 }
 
- @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-50%);
+  }
+}

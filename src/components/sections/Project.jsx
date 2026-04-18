@@ -145,7 +145,7 @@ const MyProject = () => {
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-lg dark:hover:bg-neutral-800"
+              className="bg-gray-100 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800 rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-lg dark:hover:bg-neutral-800 shadow-lg"
             >
               <div className="overflow-hidden rounded-lg">
                 <img
