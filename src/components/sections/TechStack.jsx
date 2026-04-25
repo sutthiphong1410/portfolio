@@ -8,23 +8,18 @@ const groups = [
       {
         name: "JavaScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        tip: "ES6+, async/await, DOM",
-        strong: true,
       },
       {
         name: "TypeScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-        tip: "Types, interfaces, generics",
       },
       {
         name: "Python",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        tip: "Scripting, data processing",
       },
       {
         name: "PHP",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        tip: "Basic syntax and web development",
       },
     ],
   },
@@ -34,17 +29,14 @@ const groups = [
       {
         name: "MongoDB",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-        tip: "NoSQL, aggregation pipeline",
       },
       {
         name: "PostgreSQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-        tip: "Relational, joins, indexing",
       },
       {
         name: "MySQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        tip: "Queries, schema design",
       },
     ],
   },
@@ -54,25 +46,18 @@ const groups = [
       {
         name: "React",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        tip: "5+ projects — CRUD, Auth, Dashboard",
-        strong: true,
       },
       {
         name: "Next.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-        tip: "SSR, SSG, App Router",
-        strong: true,
       },
       {
         name: "Vue.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-        tip: "Basic components and reactivity",
       },
       {
         name: "Tailwind",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-        tip: "Utility-first, responsive design",
-        strong: true,
       },
     ],
   },
@@ -82,12 +67,10 @@ const groups = [
       {
         name: "Node.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        tip: "REST APIs, Express, middleware",
       },
       {
         name: "Express",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-        tip: "Routing, error handling, MVC",
       },
     ],
   },
@@ -97,18 +80,14 @@ const groups = [
       {
         name: "Vercel",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
-        tip: "Frontend and serverless deployment",
-        strong: true,
       },
       {
         name: "Netlify",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
-        tip: "Static sites and serverless functions",
       },
       {
         name: "Github pages",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        tip: "Static site hosting via GitHub repos",
       },
     ],
   },
@@ -118,24 +97,18 @@ const groups = [
       {
         name: "Git",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        tip: "Branching, PRs, conflict resolution",
-        strong: true,
       },
       {
         name: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        tip: "Repos, issues, GitHub Actions",
-        strong: true,
       },
       {
         name: "Prisma",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-        tip: "ORM for Node.js and TypeScript",
       },
       {
         name: "Postman",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
-        tip: "API testing and documentation",
       },
     ],
   },
@@ -147,19 +120,9 @@ const TechCard = ({ tech }) => (
     bg-gray-50 dark:bg-neutral-800 border-gray-200 dark:border-neutral-700
     hover:-translate-y-1 hover:bg-white dark:hover:bg-neutral-900
     hover:shadow-sm cursor-default
-    ${tech.strong ? "hover:border-violet-400 dark:hover:border-violet-500" : "hover:border-gray-300 dark:hover:border-neutral-500"}
+  hover:border-violet-400 dark:hover:border-violet-500" 
   `}
   >
-    {/* Tooltip */}
-    <div
-      className="pointer-events-none absolute bottom-[calc(100%+8px)] left-1/2 -translate-x-1/2 scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-150
-      bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-600 rounded-lg px-3 py-2
-      text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap z-10 shadow-md"
-    >
-      {tech.tip}
-      <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-200 dark:border-t-neutral-600" />
-    </div>
-
     <Image
       src={tech.icon}
       alt={tech.name}

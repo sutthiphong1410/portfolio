@@ -36,7 +36,8 @@ const About = () => {
             </div>
             <div className="flex flex-wrap text-sm gap-2">
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/sutthiphong1410"
+                target="_blank"
                 className="px-4 py-2 bg-black text-white dark:border dark:border-gray-400 rounded-full flex gap-2 items-center hover:bg-gray-800 transition-colors"
               >
                 <FaGithub />

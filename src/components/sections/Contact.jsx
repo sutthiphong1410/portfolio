@@ -4,8 +4,33 @@ import { BsChat } from "react-icons/bs";
 import { IoMdArrowForward } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
 import { IoIosSend } from "react-icons/io";
+import { useState } from "react";
+import Link from "next/link";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmailToClipboard = () => {
+    const email = "sutthiphong25451@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      showToast("Email copied to clipboard!");
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const showToast = (msg) => {
+    const el = document.createElement("div");
+    el.textContent = msg;
+    el.style.cssText = `
+    position: fixed; top: 70px; left: 50%; transform: translateX(-50%);
+    background: #3483eb; color: #fff; padding: 10px 20px;
+    border-radius: 8px; font-size: 14px; z-index: 9999;
+    animation: fadeIn 0.2s ease;
+  `;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2000);
+  };
   return (
     <>
       <div id="contact" className="py-20 px-4 max-w-4xl mx-auto scroll-mt-20">
@@ -32,8 +57,11 @@ const Contact = () => {
                   <div className=" font-semibold text-sm text-gray-600 dark:text-white">
                     Email
                   </div>
-                  <div className="text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    your.email@example.com
+                  <div
+                    className="text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    onClick={copyEmailToClipboard}
+                  >
+                    sutthiphong25451@gmail.com
                   </div>
                 </div>
               </div>
@@ -45,12 +73,16 @@ const Contact = () => {
                     Social Media
                   </div>
 
-                  <div className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                  <Link
+                    href={"https://github.com/sutthiphong1410"}
+                    target="_blank"
+                    className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  >
                     <h3>Github </h3>
                     <span>
                       <IoMdArrowForward />
                     </span>
-                  </div>
+                  </Link>
 
                   <div className="flex gap-2 items-center text-gray-400 text-sm cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                     <h3>LinkedIn</h3>

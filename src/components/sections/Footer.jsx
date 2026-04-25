@@ -2,6 +2,7 @@
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -17,9 +18,13 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex gap-4 mt-4">
-              <div className="bg-gray-300 dark:bg-gray-600 p-3 rounded-full hover:bg-purple-500 transition-colors duration-300 cursor-pointer">
+              <Link
+                href={"https://github.com/sutthiphong1410"}
+                target="_blank"
+                className="bg-gray-300 dark:bg-gray-600 p-3 rounded-full hover:bg-purple-500 transition-colors duration-300 cursor-pointer"
+              >
                 <FaGithub className=" text-white" />
-              </div>
+              </Link>
               <div className="bg-gray-300 dark:bg-gray-600 p-3 rounded-full hover:bg-purple-500 transition-colors duration-300 cursor-pointer">
                 <IoLogoLinkedin className=" text-white" />
               </div>

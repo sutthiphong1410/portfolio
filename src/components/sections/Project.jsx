@@ -14,15 +14,66 @@ const MyProject = () => {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg";
   const iconMongo =
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg";
+  const iconExpress =
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg";
+  const iconPrisma =
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg";
+  const iconNext =
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg";
+  const iconTailwind =
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg";
+  const iconPosgresql =
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg";
 
   const projects = [
     {
-      title: "Full Stack Project",
+      title: "Phone Store Management",
+      description:
+        "A comprehensive system for managing phone store operations, including inventory management, sales tracking, and customer relationship management.",
+      image: "https://picsum.photos/seed/picsum/536/354",
+      type: "Full Stack",
+      githubLink: "https://github.com/sutthiphong1410/phone_store_management",
+      techStack: [
+        iconNext,
+        iconTailwind,
+        iconNode,
+        iconExpress,
+        iconPrisma,
+        iconMongo,
+      ],
+    },
+    {
+      title: "Bloom",
       description:
         "A brief description of the project, highlighting its features and technologies used.",
       image: "https://picsum.photos/seed/picsum/536/354",
+      githubLink: "https://github.com/sutthiphong1410/bloom",
+      type: "Frontend",
+      techStack: [iconNext, iconTailwind],
+    },
+    {
+      title: "Backend Project",
+      description:
+        "A brief description of the project, highlighting its features and technologies used.",
+      image: "https://picsum.photos/seed/picsum/536/354",
+      type: "Backend",
+      techStack: [iconJs, iconNode, iconMongo],
+    },
+    {
+      title: "POS Food",
+      description:
+        "A brief description of the project, highlighting its features and technologies used.",
+      image: "https://picsum.photos/seed/picsum/536/354",
+      githubLink: "https://github.com/sutthiphong1410/pos-food-fullstack",
       type: "Full Stack",
-      techStack: [iconJs, iconReact, iconNode, iconMongo],
+      techStack: [
+        iconNext,
+        iconTailwind,
+        iconNode,
+        iconExpress,
+        iconPrisma,
+        iconPosgresql,
+      ],
     },
     {
       title: "Frontend Project",
@@ -41,42 +92,20 @@ const MyProject = () => {
       techStack: [iconJs, iconNode, iconMongo],
     },
     {
-      title: "Full Stack Project",
+      title: "Portfolio",
       description:
         "A brief description of the project, highlighting its features and technologies used.",
       image: "https://picsum.photos/seed/picsum/536/354",
-      type: "Full Stack",
-      techStack: [iconJs, iconReact, iconNode, iconMongo],
-    },
-    {
-      title: "Frontend Project",
-      description:
-        "A brief description of the project, highlighting its features and technologies used.",
-      image: "https://picsum.photos/seed/picsum/536/354",
+      githubLink: "https://github.com/sutthiphong1410/portfolio",
       type: "Frontend",
-      techStack: [iconJs, iconReact],
+      techStack: [iconNext, iconTailwind],
     },
     {
-      title: "Backend Project",
+      title: "King Protein",
       description:
         "A brief description of the project, highlighting its features and technologies used.",
       image: "https://picsum.photos/seed/picsum/536/354",
-      type: "Backend",
-      techStack: [iconJs, iconNode, iconMongo],
-    },
-    {
-      title: "Full Stack Project",
-      description:
-        "A brief description of the project, highlighting its features and technologies used.",
-      image: "https://picsum.photos/seed/picsum/536/354",
-      type: "Full Stack",
-      techStack: [iconJs, iconReact, iconNode, iconMongo],
-    },
-    {
-      title: "Frontend Project",
-      description:
-        "A brief description of the project, highlighting its features and technologies used.",
-      image: "https://picsum.photos/seed/picsum/536/354",
+      githubLink: "https://github.com/sutthiphong1410/kingProtein",
       type: "Frontend",
       techStack: [iconJs, iconReact],
     },
@@ -154,18 +183,21 @@ const MyProject = () => {
                   className="w-full h-full object-cover cursor-pointer"
                 />
               </div>
-              <div className="flex justify-between items-center my-4">
+              <div className="flex gap-1 items-center justify-end mt-3">
+                <button className="text-[15px] text-black dark:text-white border border-black dark:border-gray-200 hover:bg-gray-200 dark:hover:text-black px-2 py-0.5 rounded-xl text-sm cursor-pointer duration-300 active:scale-95">
+                  Live Demo
+                </button>
+                <div
+                  onClick={() => window.open(project.githubLink, "_blank")}
+                  className="text-xl cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white duration-300 active:scale-95"
+                >
+                  <FaGithub />
+                </div>
+              </div>
+              <div className="my-1">
                 <h4 className="text-sm font-medium text-black dark:text-gray-300">
                   {project.title}
                 </h4>
-                <div className="flex gap-2 items-center">
-                  <button className="text-[15px] text-black dark:text-white border border-black dark:border-gray-200 hover:bg-gray-200 dark:hover:text-black px-2 py-0.5 rounded-xl text-sm cursor-pointer duration-300 active:scale-95">
-                    Live Demo
-                  </button>
-                  <div className="text-xl cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white duration-300 active:scale-95">
-                    <FaGithub />
-                  </div>
-                </div>
               </div>
               <p className="text-gray-600 text-[16px] font-light">
                 {project.description}
